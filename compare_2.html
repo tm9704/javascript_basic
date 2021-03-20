@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //null 값이 없다, undefined 값이 정의되지 않았다.
+        var a;
+        alert(a); //undefined (의도x)
+
+        var a = null;
+        alert(a); //null(의도)
+
+        alert(undefined == null); //true
+        alert(undefined === null); //false
+
+        //true, false는 boolean 이라는 데이터 타입.
+
+        alert(true);
+        alert(true == 1);
+        alert(true == 2); 
+        //==연산자는 true 와 1은 같은 값
+        // === 연산자는 true 와 1은 다른값
+
+        alert(0 === -0);//true
+        alert(NaN === NaN); // NaN은 0으로 나눴을 때 계산할 수 없는 것들 ===에서는 false (생코 링크 참고.)
+    </script>
+</body>
+</html>
