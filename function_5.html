@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        //함수를 정의하는 또 다른 방법, numbering이라는 변수가 함수의 정의를 가짐 
+        numbering=function(){
+            var i = 0;
+            while(i < 10){
+                document.write(i);
+                i+=1;
+            }
+        }
+        numbering();
+
+        //이렇게 하면 함수 정의와 동시에 호출.(익명 함수(1회성 호출))
+        (function(){
+            var i = 0;
+            while(i < 10){
+                document.write(i);
+                i+=1;
+            }
+        })();
+    </script>
+</body>
+</html>
