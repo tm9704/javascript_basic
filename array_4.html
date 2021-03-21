@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        //push => 자바 스크립트가 제공하는 기본 함수, 배열 마지막에 새로운 요소를 추가.
+        li.push('f');
+        alert(li);
+
+        //concat => 요소 여러개를 추가, 두 배열을 연결해서 하나의 배열로 만들고 그 결과를 리턴함.
+        li.concat('g','h');
+        alert(li);
+
+        //unshift => 배열의 맨 앞에 요소를 추가.
+        li.unshift('z');
+        alert(li);
+
+        //splice => splice(index, howmany, element1,...,elementk)
+        //몇번 째 인덱스, index로부터 index+howmany에 해당하는 원소들이 삭제됨 0이면 삭제 x
+        li.splice(2,0,'B');
+        alert(li);
+    </script>
+</body>
+</html>
