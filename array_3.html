@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function get_members(){
+            return['egoing', 'k8805', 'sorialgi', 'leezche'];
+        }
+
+        members = get_members();
+
+        document.write(members[0].toUpperCase()+"<br />");
+        document.write(members[1].toUpperCase()+"<br />");
+        document.write(members[2].toUpperCase()+"<br />");
+        //변수명.toUpperCase() => 소문자를 대문자로 변경하는 함수.
+
+        var a = ['egoing', 'k8805', 'sorialgi'];
+        //원소의 개수를 알려줌 (length)
+        alert(a.length);
+
+        for(var i = 0; i<members.length; i++){
+            document.write(members[i].toUpperCase()+"<br />");
+        }
+    </script>
+</body>
+</html>
