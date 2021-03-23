@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        //클로저(closure) => 내부함수가 외부함수의 맥락(context)에 접근할 수 있는 것을 가리킴.
+        function outter(){ //외부함수 == var outter = function{}
+            function inner(){ //내부함수 ==  var inner = function{}
+                var title = 'coding everybody';
+                alert(title);
+            }
+            inner();
+        }
+        outter();
+
+        //title이라는 변수를 사용하려 했을 때 inner에 title이라는 변수가 없다면, javascript는 inner를 포함하고 있는 바깥쪽의 함수에서 title을 찾음. 즉 내부함수에서 외부함수의 지역변수에 접근 할 수 있다. == 이게 클로저
+        function outter2(){
+            var title = 'coding everybody';
+            function inner2(){
+                alert(title);
+            }
+            inner2();
+        }
+        outter2();
+    </script>
+</body>
+</html>
