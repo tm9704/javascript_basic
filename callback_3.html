@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        var numbers = [20,10,9,8,7,6,5,4,3,2,1];
+        //numbers => (배열)객체, sort=> 함수(객체에 속해있기 때문에 (내장)메소드).
+
+        var sortfunc = function(a, b){
+            // console.log(a,b);
+            // if(a>b){
+            //     return 1;//1일 경우 a 나중 배치
+            // }else if(a<b){
+            //     return -1; //-1일 경우 b 나중 배치
+            // } else {
+            //     return 0;
+            // }
+            return b-a;
+        }
+        console.log(numbers.sort(sortfunc));
+        //여기서 sortfunc가 콜백 함수.
+        //콜백함수란 파라미터로 함수를 전달받아, 함수의 내부에서 실행하는 함수.
+    </script>
+</body>
+</html>
