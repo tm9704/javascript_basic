@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        //전역, 지역 변수 예시.
+        var vscope = 'golbal';
+        function fscope(){
+            alert(vscope);
+        }
+
+        function fscope2(){
+            var lv = 'local variables';
+            alert(lv);
+        }
+
+        fscope();
+        fscope2();
+        alert(lv);
+
+        //var을 쓰는 것과 쓰지 않는 것의 차이
+        var vscope2 = 'golbal';
+        function fscope(){
+            var vscope2 = 'local'; //아래 alert에서 global이 출력
+            //위는 로컬변수.
+            //vscope2 = 'local'; 아래 alert에서 local이 출력
+            //위는 글로벌변수가 됨. 왜냐 새로 정의한 변수가 아님.
+        }
+        fscope();
+        alert(vscope2);
+
+    </script>
+</body>
+</html>
