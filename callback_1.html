@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        //값으로서의 함수 => javascript에서는 함수도 객체, 즉 일종의 값이 될 수 있다. javascript의 함수가 다른 언어의 함수와 다른 점은 함수가 값이 될 수 있다는 점이다.
+        function a(){} // => var a = function(){}
+        
+        a = {
+            //b 는 key이자 객체안에서의 변수의 역할. value를 저장하고 있기 때문. 변수 == 속성(property). 객체의 속성 값으로 담겨진 함수 function은 메소드라고 부른다.
+            b:function(){
+
+            }
+        };
+
+        //함수도 일종의 값이기 때문에 인자로 들어갈 수 있다.
+        function cal(func, num){
+            return func(num);
+        }
+
+        function increase(num){
+            return num + 1;
+        }
+        
+        function decrease(num){
+            return num-1;
+        }
+
+        alert(cal(increase, 1));
+        alert(cal(decrease, 1));
+    </script>
+</body>
+</html>

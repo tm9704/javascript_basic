@@ -4,7 +4,20 @@
 </head>
 <body>
     <script>
+        //정적 유효범위
         
+        var i = 5;
+
+        function a(){
+            var i = 10;
+            b();
+        }
+        //선언 시점에서의 전역변수를 사용함. 호출 당시로 생각하면 안된다. => 이게 정적 유효범위
+        function b(){
+            document.write(i);
+        }
+
+        a();
     </script>
 </body>
 </html>
