@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        //협업 시 나만 쓰는 전역 변수로 객체를 선언해 두고 그 객체 안에 소속되게 하면 충돌할 확률이 적어짐.
+        var MYAPP = {} //이 젼역변수의 값은 객체
+        MyAPP.calculator = { //calculator은 속성
+            'left' : null,
+            'right' : null
+        }
+        MYAPP.coordinate = {
+            'left' : null,
+            'right' : null
+        }
+
+        MYAPP.calculator.left = 10;
+        MYAPP.calculator.right = 20;
+        function sum(){
+            return MYAPP.calculator.left + MYAPP.calculator.right;
+        }
+        document.write(sum());
+
+        //전역 변수를 1개라도 사용하고 싶지 않을 경우.
+        //function으로 감싸주고, 함수를 정의한 후 괄호로 감싸줌. => 익명함수.
+        (function(){
+            var MYAPP = {} //이건 함수 안에 선언된 변수 이므로 이 함수의 지역변수
+            MyAPP.calculator = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.coordinate = {
+                'left' : null,
+                'right' : null
+            }
+
+            MYAPP.calculator.left = 10;
+            MYAPP.calculator.right = 20;
+            function sum(){
+                return MYAPP.calculator.left + MYAPP.calculator.right;
+            }
+            document.write(sum());
+        }())
+    </script>
+</body>
+</html>
