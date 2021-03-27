@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        //함수를 호출하는 가장 기본적인 방법.
+        function func(){
+        }
+        func();
+
+        //자바스크립트에서 함수는 일종의 객체. 객체는 속성을 가지고 있다. 그 속성의 값이 저장되어 있다면 속성, 함수가 저장되어 있다면 메소드라고 부른다.
+        function sum(arg1, arg2){
+            return arg1+arg2;
+        }
+        //.apply, .call로 호출 가능. (자바스크립트가 제공하는 함수안의 메소드(함수))
+        // native code는 내장된 코드라는 뜻
+        // 이렇게 null 값이 들어가는 상황에서는 안쓰는게 좋다.
+        alert(sum.apply(null,[1,2])); // == sum(1,2)
+    </script>
+</body>
+</html>
