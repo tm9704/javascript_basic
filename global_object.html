@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //자바스크립트에서 모든 객체는  기본적으로 전역객체의 프로퍼티임.
+        function func(){
+            alert('Hello?');
+        }
+        func(); //암시적으로 window가 원래 사용됨.(생략하면!) 모든 전역변수와 함수는 사실 window객체의 프로퍼티.
+        window.func();
+
+        //===============================
+
+        var o = {'func' : function(){
+            alert('Hello?');
+        }}
+        o.func();
+        window.o.func();
+
+        //===============================
+    </script>
+</body>
+</html>
