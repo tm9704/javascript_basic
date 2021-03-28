@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //constructor_1.html  에서 처럼 할 때 객체를 여러개 생성한다면 중복이 발생함.
+        function Person(){}
+        //new를 붙이고 함수를 호출하면 (생성자) 객체를 담음. == var p = {}와 유사하다.
+        //자바스크립트에서 생성자는 함수이고 어디에도 속해있지 않다.
+        var p = new Person();
+        p.name = 'egoing';
+        p.introduce = function(){
+            return 'My name is ' + this.name;
+        }
+        document.write(p.introduce());
+
+        //=================================
+
+        function Person(){}
+        var p1 = new Person();
+        p1.name = 'egoing';
+        p1.introduce = function(){
+            return 'My name is ' + this.name; 
+        }
+        document.write(p1.introduce() + '<br />');
+
+        var p2 = new Person();
+        p2.name =  'leezche';
+        p2.introduce = function(){
+            return 'My name is ' + this.name;
+        }
+        document.write(p2.introduce() + '<br />');
+
+        //========================================
+
+        //초기화 => init
+        function Person(name){
+            this.name = name;
+            this.introduce = function(){
+                return 'My name is ' + this.name;
+            }
+        }
+
+        var p1 = new Person('egoing');
+        document.write(p1.introduce() + '<br />');
+
+        var p2 = new Person('leezche');
+        document.write(p2.introduce() + '<br />');
+    </script>
+</body>
+</html>
