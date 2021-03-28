@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        /*
+        함수도 객체다. => 함수 리터럴
+        function sum(x,y){return x+y;}
+        sum(1,2);
+
+        var sum2 = new Function('x', 'y', 'return x+y;');
+        sum2(1,2);
+        위 두 코드는 똑같이 실행됨
+        */
+
+
+        var o = {} //객체 리터럴
+        var p = {}
+        function func(){
+            switch(this){
+                case o:
+                    document.write('o<br />');
+                    break;
+                case p:
+                    document.write('p<br />');
+                    break;
+                case window:
+                    document.write('window<br />');
+                    break;
+            }
+        }
+        func(); //window
+        func.apply(o); //o
+        func.apply(p); //p
+    </script>
+</body>
+</html>
