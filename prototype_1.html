@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //prototype => 원형! 
+        //생성자는 기본적으로 함수. 우리가 이 함수를 호출할 때 new를 붙여주면 단순한 함수가 아니라 생성자가 되고, 그렇게 해서 실행된 결과는 새로운 객체를 만들어서 그 객체를 리턴.
+        //만약 빈 객체를 생성하는게 생성자의 역할이라고 하면 별 의미는 없을 것이다. var o ={}; 이게 더 나을 수 있다. 그러나 우리가 아래처럼 하는 이유는 우리가 어떤 객체를 만들 때 그 객체가 가지고 있어야 하는 어떤 메소드, 어떤 속성을 기본적으로 가지고 우리에게 주어지길 바라기 때문.
+        //우리가 얻고자 하는 그 객체의 원형, 즉 그 객체가 어떤 메소드, 어떤 속성을 가지고 있는 원형이 어딘가에 저장되어 있는데 그게 prototype 이라는 속성에 들어있다.
+        //property 안에는 어떠한 객체가 정의(저장)되어 있다. new를 이용해 생성자를 호출하면 javascript  는 생성자 함수의 prototype 속성에 저장되어 있는 객체를 꺼내서 그것을 리턴.
+
+        //prototype chain
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+
+        function Super(){}
+        Super.prototype = new Ultra();
+
+        function Sub(){}
+        Sub.prototype = new Super();
+
+        var o = new Sub();
+        console.log(o.ultraProp);
+    </script>
+</body>
+</html>
