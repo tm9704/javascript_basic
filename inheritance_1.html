@@ -17,7 +17,14 @@
             return 'My name is ' + this.name;
         }
 
-        var p1 = new Person('egoing');
+        function Programmer(name){
+            this.name = name;
+        }
+        //상속이 이루어지는 부분. 
+        //new Person으로 새로운 객체가 생성이 되는데, 자바 스크립트는 prototype이라는 속성을 생성자 함수가 가지고 있는지 확인함. 그리고 그 생성자 함수안에 들어있는 객체와 똑같은 객체를 만들어서 생성자의 결과로 리턴함.
+        Programmer.prototype = new Person();
+
+        var p1 = new Programmer('egoing');
         document.write(p1.introduce() + "<br />");
     </script>
 </body>
