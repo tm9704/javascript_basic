@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        Object.prototype.contain = function(needle){
+            for(var name in this){
+                if(this[name] === needle){
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        var o = {'name':'egoing', 'city':'seoul'}
+        //contain은 값을 있는지 확인해서 true, false값 리턴
+        console.log(o.contain('egoing'));
+        var a = ['egoing', 'leezche','grapittie'];
+        console.log(a.contain('leezche'));
+    </script>
+</body>
+</html>
