@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        var arr = new Array('seoul','new york','ladarkh','pusan','Tsukuba');
+        function getRandomValueFromArray(arr){
+            //Math.random() 은 random한 숫자를 가져옴. 0~1사이의 소수를 제공.
+            //Math.floor 은 소수점 뒤의 값들을 제거해줌.
+            var index = Math.floor(arr.length * Math.random());
+            return arr[index];
+        }
+        console.log(getRandomValueFromArray(arr));
+    </script>
+</body>
+</html>
