@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //원시 데이터 타입 =>  숫자, 문자열 등 기본 데이터 타입.
+        //래퍼 객체
+        var str = 'coding'; // 1행과 2행사이에 str = new String('coding'); 이라는 문이 들어간다고 생각하면 된다. 이게 래퍼 객체. (자동으로 처리해준다.)
+        console.log(str.length); //6     .=>Object access Operator
+        //즉 str안의 어떤 값은 객체이고 그 객체는 문자열임. 
+        console.log(str.charAt(0)); //"c"
+
+        var str = 'coding';
+        str.prop = 'everybody'; //이 순간에는 객체가 만들어 지지만 이순간이 끝나고 아래에서는 객체를 제거하고 원래의 원시데이터 타입으로 변경하기 때문에 prop이라는 객체가 존재하지 않음.
+        console.log(str.prop); //undefined 
+    </script>
+</body>
+</html>
