@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        //Object.keys()
+        //어떠한 객체가 있을 때 그 객체가 가지고 있는 Key들을 리턴해주는 메소드.
+        //prototype이 없는 경우는 Object.keys(인자);
+        var arr = ["a", "b", "c"];
+        console.log('Object.keys(arr)', Object.keys(arr)); //will alert "0,1,2"
+
+        //Object.prototype.toString()
+        //어떠한 객체가 있을 때 그 객체가 담고 있는 어떠한 값이 무엇인가를 보기좋게 출력해주는 메소드.
+        //prototype이 있는 거는 어떠한 객체를 만들고, 그 객체를 담고 있는 식별자.toString()
+        var o = new Object();
+        console.log('o.toString()', o.toString());
+
+        var a = new Array(1,2,3);
+        console.log('a.toString()', a.toString());
+    </script>
+</body>
+</html>
