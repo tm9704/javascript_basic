@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //복제 => 연결되어 있지않은 데이터.
+        var a = 1; //값이 원시데이터 타입일때 => String, Number, Boolean, null, undefined
+        var b = a;
+        b = 2;
+        console.log(a); // 1
+
+        //참조
+        var a = {'id':1}; //값이 객체일 때.
+        var b = a;
+        b.id = 2;
+        console.log(a.id); //2
+
+        var a = {'id':1};
+        var b = a;
+        b = {'id':2}; //이건 새로운 객체 생성이라서 맨 위 예제랑 거의 동일한 예제
+        console.log(a.id); //1
+    </script>
+</body>
+</html>
