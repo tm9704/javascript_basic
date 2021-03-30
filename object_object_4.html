@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //이런 객체의 확장은 위험하다. 모든 객체에 영향을 줄 수 있기 때문.
+        Object.prototype.contain = function(needle){
+            for(var name in this){
+                if(this[name] === needle){
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        var o = {'name':'egoing', 'city':'seoul'}
+        var a = ['egoing', 'leezche','grapittie'];
+
+        for(var name in o){
+            //해당 객체가 인자로 전달한 어떠한 값을 자신의 property로 갖고 있느냐 체크
+            //어떠한 프로퍼티의 이름이 그 객체의 직접적인 소유인지 체크.
+            if(o.hasOwnProperty(name)){
+                console.log(name);
+            }
+        }
+    </script>
+</body>
+</html>
